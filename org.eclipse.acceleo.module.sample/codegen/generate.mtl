@@ -40,7 +40,9 @@
 [/template]
 
 [template public eannotationName(aEAnnotation : EAnnotation)]
-	[aEAnnotation.details.detailName()/]
+	[for (detail : EStringToStringMapEntry | eAnnotations.details)]
+		[detail.detailName()/]
+	[/for]
 [/template]
 
 [template public detailName(detail : EStringToStringMapEntry)]
