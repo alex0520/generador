@@ -18,5 +18,16 @@
 [template public generarNombre(aClass : Class)]
 	<li>
 		[aClass.name/]
+		<ul>
+			[for (property : Property| aClass.attribute)]
+				[property.generarAtributos()]
+			[/for]
+		</ul>
 	</li>	
+[/template]
+
+[template public generarAtributos(aProperty : Property)]
+	<li>
+		[aProperty.name/]
+	</li>
 [/template]
