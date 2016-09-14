@@ -20,7 +20,7 @@
 		[aClass.name/]
 		<ul>
 			[for (property : Property| aClass.attribute)]
-				[property.generarAtributos()]
+				[property.generarAtributos()/]
 			[/for]
 		</ul>
 	</li>	
