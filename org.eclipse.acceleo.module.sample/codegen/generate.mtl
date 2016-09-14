@@ -20,7 +20,7 @@
 		[aClass.name/]		
 		[for (eannotation: EAnnotation | aClass.eAnnotations)]
 			[for (aEStringToStringMapEntry : EStringToStringMapEntry | eannotation.details)]
-				[aEStringToStringMapEntry.key/]
+				[aEStringToStringMapEntry.toString()/]
 			[/for]
 		[/for]
 		<ul>
