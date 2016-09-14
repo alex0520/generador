@@ -28,6 +28,10 @@
 
 [template public generarAtributos(aProperty : Property)]
 	<li>
-		[aProperty.name/]:[aProperty.type/]
+		[aProperty.name/]:[aProperty.type.typeName()/]
 	</li>
+[/template]
+
+[template public typeName(aType : Type)]
+	[aType.name/]
 [/template]
