@@ -19,7 +19,7 @@
 	<li>
 		[aClass.name/]		
 		[for (eannotation: EAnnotation | aClass.eAnnotations)]
-			[eannotation.eannotationName()/]
+			[eannotation.eannotationName()/]<br/>
 		[/for]
 		<ul>
 			[for (property : Property| aClass.attribute)]
@@ -40,8 +40,8 @@
 [/template]
 
 [template public eannotationName(aEAnnotation : EAnnotation)]
-	[for (detail : EStringToStringMapEntry | eAnnotations.details)]
-		[detail.detailName()/]
+	[for (aEStringToStringMapEntry : EStringToStringMapEntry | eAnnotations.details)]
+		[aEStringToStringMapEntry.detailName()/]
 	[/for]
 [/template]
 
