@@ -19,7 +19,9 @@
 	<li>
 		[aClass.name/]		
 		[for (eannotation: EAnnotation | aClass.eAnnotations)]
-			[eannotation.eannotationName()/]<br/>
+			[for (aEStringToStringMapEntry : EStringToStringMapEntry | eannotation.details)]
+				[aEStringToStringMapEntry.detailName()/]
+			[/for]
 		[/for]
 		<ul>
 			[for (property : Property| aClass.attribute)]
@@ -37,12 +39,6 @@
 
 [template public typeName(aType : Type)]
 	[aType.name/]
-[/template]
-
-[template public eannotationName(aEAnnotation : EAnnotation)]
-	[for (aEStringToStringMapEntry : EStringToStringMapEntry | eAnnotations.details)]
-		[aEStringToStringMapEntry.detailName()/]
-	[/for]
 [/template]
 
 [template public detailName(detail : EStringToStringMapEntry)]
