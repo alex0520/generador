@@ -46,5 +46,5 @@
 [/template]
 
 [template public detailName(detail : EStringToStringMapEntry)]
-	[detail.value/]
+	[detail.key/]:[detail.value/]
 [/template]
