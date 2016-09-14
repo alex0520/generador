@@ -18,7 +18,7 @@
 [template public generarNombre(aClass : Class)]
 	<li>
 		[aClass.name/]
- 		[aClass.eAnnotations.getProperty('gmm-documentation')/]
+ 		[aClass.eAnnotations.getProperty(gmm-documentation)/]
 		<ul>
 			[for (property : Property| aClass.attribute)]
 				[property.generarAtributos()/]
